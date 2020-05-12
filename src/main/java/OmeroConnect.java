@@ -709,10 +709,10 @@ public class OmeroConnect {
         config.contOnError.set(false);
         config.debug.set(false);
 
-        config.hostname.set(serverName);
-        config.port.set(serverPort);
-        config.username.set(userID);
-        config.password.set(userPass);
+        config.hostname.set(JDialogOmeroConnect.serverName);
+        config.port.set(JDialogOmeroConnect.serverPort);
+        config.username.set(JDialogOmeroConnect.userID);
+        config.password.set(JDialogOmeroConnect.userPass);
 
         // use .target instead ??
         config.target.set("Dataset:" + datasetData.getId());
@@ -780,10 +780,10 @@ public class OmeroConnect {
         config.contOnError.set(false);
         config.debug.set(false);
 
-        config.hostname.set(serverName);
-        config.port.set(serverPort);
-        config.username.set(userID);
-        config.password.set(userPass);
+        config.hostname.set(JDialogOmeroConnect.serverName);
+        config.port.set(JDialogOmeroConnect.serverPort);
+        config.username.set(JDialogOmeroConnect.userID);
+        config.password.set(JDialogOmeroConnect.userPass);
 
 // the imported image will go into 'orphaned images' unless
 // you specify a particular existing dataset like this:

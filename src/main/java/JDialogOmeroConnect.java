@@ -451,7 +451,7 @@ public class JDialogOmeroConnect extends javax.swing.JDialog {
             if (connectOK) {
                 jButtonConnect.setEnabled(false);
                 try {
-                    projects = OmeroConnect.findUserProjects(getUserId(userID));
+                    projects = OmeroConnect.findUserProjects(OmeroConnect.getUserId(userID));
                     if (projects.isEmpty())
                     IJ.showMessage("Error", "No project found for user " + userID);
                     else {
