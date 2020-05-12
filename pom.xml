@@ -7,9 +7,9 @@
         
 	<groupId>cirb</groupId>
 	<artifactId>Omero_Utils</artifactId>
-	<version>1.0.0</version>
+	<version>master-SNAPSHOT</version>
         <packaging>jar</packaging>
-	<name>plugins/Omero_Utils</name>
+	<name>Omero_Utils</name>
 	<description>
             Some tools to connect and retreive image informations
             to OMERO server or local machine
@@ -29,12 +29,12 @@
 		</developer>
 	</developers>
 
-
-	<properties>
-                <imagej.app.directory>/opt/Fiji.app/</imagej.app.directory>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<main-class>Omero_Utils.jar</main-class>
-	</properties>
+    <scm>
+        <connection>scm:git:git://github.com/pmailly/Omero_Utils</connection>
+        <developerConnection>scm:git:git@github.com:pmailly/Omero_Utils</developerConnection>
+        <tag>HEAD</tag>
+        <url>https://github.com/pmailly/Omero_Utils</url>
+    </scm>
 
 	<dependencies>
 		<dependency>
@@ -129,24 +129,7 @@
                         <target>1.8</target>
                     </configuration>
 		</plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-antrun-plugin</artifactId>
-                    <executions>
-                        <execution>
-                            <id>copytoplugins</id>
-                            <phase>install</phase>
-                            <goals>
-                                <goal>run</goal>
-                            </goals>
-                            <configuration>
-                                <tasks>
-                                    <copy todir="${imagej.app.directory}/plugins/CIRB" file="target/${project.build.finalName}.jar"/>
-                                </tasks>
-                            </configuration>
-                        </execution>
-                    </executions>
-                </plugin>
+               
             </plugins>
 	</build>
 
